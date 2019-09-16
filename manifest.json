@@ -1,0 +1,28 @@
+{
+	"manifest_version": 2,
+	"name": "サボろうとするとメンターが現れる",
+	"version": "0.1",
+	"content_scripts": [
+		{
+			"matches": ["https://twitter.com/*","https://www.youtube.com/*","https://www.yahoo.co.jp/*"],
+			"exclude_globs": ["https://www.youtube.com/watch?v=IZmYn4ObRJc"],
+			"match_about_blank": true,
+			"js": ["script.js"],
+			"run_at": "document_start"
+		}
+	],
+	"page_action": {
+		"default_icon": {
+			"16": "images/16.png",
+			"32": "images/32.png",
+			"48": "images/48.png",
+			"128": "images/128.png"
+		}
+	},
+	"icons": {
+		"16": "images/16.png",
+		"32": "images/32.png",
+		"48": "images/48.png",
+		"128": "images/128.png"
+	}
+}
